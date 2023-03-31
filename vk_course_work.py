@@ -18,7 +18,7 @@ class VKUser:
         res_get_photo = requests.get(URL, params=params).json()
         for k in res_get_photo['response']['items']:
             for l in k['sizes']:
-                if l['type'] == 'x':
+                if l['type'] == 'z':
                     self.dict_with_photo[k['likes']['count']] = l['url']
         return
          
